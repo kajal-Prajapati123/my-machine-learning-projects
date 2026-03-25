@@ -1,4 +1,4 @@
-Fake News Detection Project
+# Fake News Detection Project
 ## Objective
 
 The objective of this project is to build a machine learning model that can classify news articles as Real or Fake based on their headlines.
