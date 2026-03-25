@@ -1,5 +1,6 @@
 import streamlit as st 
 import pickle 
+import os
 
 file_path = os.path.join(os.getcwd(),"fake_news_detection_model.pkl")
 model = pickle.load(open(file_path,"rb"))
