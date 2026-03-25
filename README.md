@@ -15,3 +15,10 @@ My-Data-Science-Projects/
     ├── notebook.ipynb
     ├── dataset.csv
     └── README.md
+
+This repository contains multiple data science projects:
+
+1. Fake News Detection (NLP-based classification)
+2. Fraud Detection (Machine Learning model)
+
+Each project has its own folder with code, model, and documentation.
