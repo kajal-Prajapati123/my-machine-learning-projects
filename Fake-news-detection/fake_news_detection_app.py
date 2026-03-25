@@ -1,7 +1,8 @@
 import streamlit as st 
 import pickle 
 
-model = pickle.load(open("My-Machine-learning-Projects/Fake-news-detection/fake_news_detection_model.pkl","rb"))
+file_path = os.path.join(os.getcwd(),"fake_news_detection_model.pkl")
+model = pickle.load(open(file_path,"rb"))
 vectorizer = pickle.load(open("My-Machine-learning-Projects/Fake-news-detection/vectorizer.pkl","rb"))
 
 st.markdown("<h1 style = 'text-align: center; color: red;'>Fake News Detection App</h1>",unsafe_allow_html = True)
