@@ -2,17 +2,8 @@ import streamlit as st
 import pickle 
 import os
 
-# file_path = os.path.join(os.getcwd(),"fake_news_detection_model.pkl")
-# model = pickle.load(open(file_path,"rb"))
-# vectorizer = pickle.load(open("My-Machine-learning-Projects/Fake-news-detection/vectorizer.pkl","rb"))
-
-BASE_DIR = os.path.dirname(__file__)
-
-model_path = os.path.join(BASE_DIR, "fake_news_detection_model.pkl")
-vectorizer_path = os.path.join(BASE_DIR, "vectorizer.pkl")
-
-model = pickle.load(open(model_path, "rb"))
-vectorizer = pickle.load(open(vectorizer_path, "rb"))
+model = pickle.load(open("fake_news_detection_model.pkl","rb"))
+vectorizer = pickle.load(open("vectorizer.pkl","rb"))
 
 st.markdown("<h1 style = 'text-align: center; color: red;'>Fake News Detection App</h1>",unsafe_allow_html = True)
 st.subheader("Classify news as **Real** or **Fake** by using NLP")
