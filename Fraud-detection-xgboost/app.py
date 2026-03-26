@@ -42,7 +42,7 @@ threshold = st.slider("Select Fraud Detection Threshold",0.0,1.0,0.5)
 if st.button("Predict"):
    amount = features["Amount"]
 
-   if amount == "" or amount is None:
+   if amount <= 0:
        st.error("Amount is required")
    else:
         input_data["Amount"] = scl.transform(input_data[["Amount"]])
