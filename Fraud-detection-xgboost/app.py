@@ -20,8 +20,8 @@ with col2:
     st.subheader("ROC Curve")
     st.image("Fraud-detection-xgboost/Credit Card Fraud Model ROC Curve.png")
 
-model = pickle.load(open("fraud_model.pkl","rb"))
-scl = pickle.load(open("scaler.pkl","rb"))
+model = pickle.load(open("Fraud-detection-xgboost/fraud_model.pkl","rb"))
+scl = pickle.load(open("Fraud-detection-xgboost/scaler.pkl","rb"))
 
 features = {}
 with st.expander("Enter Transaction Features (V1–V28)"):
