@@ -40,12 +40,14 @@ col3.metric("Fraud F1-Score", "0.74")
 threshold = st.slider("Select Fraud Detection Threshold",0.0,1.0,0.5)
 
 if st.button("Predict"):
+    if user_input.strip() == "":
+        st.warning("Please enter some amount")
 
-    input_data["Amount"] = scl.transform(input_data[["Amount"]])
-    prob = model.predict_proba(input_data)[0][1]
-    prediction  = 1 if prob > threshold else 0
-    if prediction == 1:
-        st.error(f"Fraud Detected | Fraud Probability: {prob:.4f}")
-    else:
-        st.success(f"Lagitimate Transection | Probability: {1 - prob:.4f}")
+        input_data["Amount"] = scl.transform(input_data[["Amount"]])
+        prob = model.predict_proba(input_data)[0][1]
+        prediction  = 1 if prob > threshold else 0
+        if prediction == 1:
+            st.error(f"Fraud Detected | Fraud Probability: {prob:.4f}")
+        else:
+            st.success(f"Lagitimate Transection | Probability: {1 - prob:.4f}")
 
