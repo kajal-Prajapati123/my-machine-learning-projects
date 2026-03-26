@@ -40,7 +40,7 @@ col3.metric("Fraud F1-Score", "0.74")
 threshold = st.slider("Select Fraud Detection Threshold",0.0,1.0,0.5)
 
 if st.button("Predict"):
-    if user_input.strip() == "":
+    if input_data.strip() == "":
         st.warning("Please enter some amount")
 
         input_data["Amount"] = scl.transform(input_data[["Amount"]])
