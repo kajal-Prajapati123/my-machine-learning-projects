@@ -47,4 +47,5 @@ Scikit-learn
 The model successfully identifies fraudulent transactions despite extreme class imbalance.
 This project demonstrates real-world fraud detection challenges and practical ML solutions.
 
-
+## project link
+https://my-machine-learning-projects-tefwxcw7d2o9mrtbvrpbws.streamlit.app/
